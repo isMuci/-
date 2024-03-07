@@ -1,0 +1,44 @@
+page {
+	margin: 0;
+	padding: 0;
+	background-color: #336699;
+}
+
+.text-box {
+	padding: 16rpx 40rpx;
+	text-align: center;
+	color: #FFF;
+	border-radius: 10rpx;
+}
+
+
+.proBg, .conBg {
+	width: 280rpx;
+	height: 280rpx;
+	background-color: #EEE;
+	border-radius: 50%;
+	position: absolute;
+}
+
+.proBg_c, .conBg_c {
+	width: 280rpx;
+	height: 280rpx;
+	background-color: rgba(0,0,0,0);
+	border-radius: 50%;
+	position: absolute;
+}
+
+.proProgress, .conProgress {
+	width: 280rpx;
+	height: 280rpx;
+	
+	border-radius: 50%;
+	position: absolute;
+}
+
+.start_btn {
+	z-index: 100;
+	margin-top: 300rpx;
+	background-color: #6699dd;
+	border: solid #fff 2rpx
+}

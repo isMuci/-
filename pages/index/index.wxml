@@ -1,0 +1,42 @@
+<view>
+	<!--顶部答辩阶段-->
+	<view class="text-box" style="background-color: #cca700;display: flex;">
+		<view style="position: absolute;left: 20rpx;"> {{"<<"}} </view>
+		<picker bindchange="change_stage" style="width: 100%;" value="{{index}}" range="{{debateStage}}">
+			<view>{{debateStage[stageIndex]}}</view>
+		</picker>
+		<view style="position: absolute;right: 20rpx;">{{">>"}}</view>
+	</view>
+
+	<!--计时器-->
+	<view style="display: flex;text-align: center;padding-top: 50rpx;">
+		<!--正方-->
+		<view style="width: 50%;display: flex;justify-content: center;">
+			<canvas class="proBg" id="proBg" canvas-id="proBg">
+				<view style="width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;">{{progress_txt}}</view>
+			</canvas>
+			<canvas hidden="{{proCoverState}}" class="proProgress" id="pro" canvas-id="pro"></canvas>
+			<view class="text-box start_btn" id="pro" bindtap="start">正方发言</view>
+		</view>
+		<!--反方-->
+		<view style="width: 50%;display: flex;justify-content: center;">
+			<canvas class="conBg" id="conBg" canvas-id="conBg">
+				<view style="width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;">{{progress_txt_c}}</view>
+			</canvas>
+			<canvas hidden="{{conCoverState}}" class="conProgress" id="con" canvas-id="con"></canvas>
+			<view class="text-box start_btn" id="con" bindtap="start">反方发言</view>
+		</view>
+	</view>
+
+	<!--当前阶段 规则说明-->
+	<view style="margin-top: 40rpx;">
+		<view class="text-box" style="text-align: left;font-size: 35rpx;color: red;">{{debateStage[stageIndex]}} :</view>
+		<view class="text-box" style="text-align: left;">
+			<text>{{configs[stageIndex].desc}}</text>
+		</view>
+	</view>
+
+	<view class="text-box start_btn" style="margin-top: 80rpx;" hidden="{{stageState || stageIndex == 4}}" bindtap="nextStage">进入下一阶段</view>
+	<view class="text-box start_btn" style="margin-top: 80rpx;" hidden="{{matchState || stageIndex != 4}}" bindtap="newMatch">开始新的比赛</view>
+</view>
+<audio id="myAudio" src="{{src}}" action="{{action}}" loop ></audio>

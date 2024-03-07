@@ -1,0 +1,28 @@
+page {
+	background-color: #336699;
+	color: #FFF;
+}
+
+.title_box {
+	display: flex;
+	justify-content: space-between;
+	background-color: rgba(255, 255, 255, .25);
+	padding: 10rpx 20rpx;
+	font-size: 40rpx;
+	font-weight: bold;
+	align-items: center;
+}
+
+.radio_group {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20rpx;
+}
+wx-slider .wx-slider-value {
+	font-size: 32rpx;
+	color: #8f8;
+	width: 10%;
+}
+wx-slider .wx-slider-value ::after {
+	content: " (秒)";
+}

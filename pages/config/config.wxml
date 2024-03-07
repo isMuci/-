@@ -1,0 +1,91 @@
+<view>
+	<view class="title_box">
+		<view>立论阶段</view>
+		<switch id="0" bindchange="switchChange" checked="{{configs[0].state}}"></switch>
+	</view>
+	<view style="margin:30rpx 20rpx;">
+		<text>时间限制（秒）</text>
+		<slider id="0" bindchange="sliderChange" style="margin-top: 40rpx;" min="10" max="600" show-value value="{{configs[0].time}}"></slider>
+	</view>
+	<view style="margin:60rpx 20rpx 30rpx 20rpx;">
+		<text>声音提醒</text>
+		<radio-group id="0" bindchange="radioChange" class="radio_group">
+			<label><radio value="15" checked></radio>提前15秒</label>
+			<label><radio value="10"></radio>提前10秒</label>
+			<label><radio value="5"></radio>提前5秒</label>
+		</radio-group>
+	</view>
+</view>
+<view>
+	<view class="title_box">
+		<view>驳立论阶段</view>
+		<switch id="1" bindchange="switchChange" checked="{{configs[1].state}}"></switch>
+	</view>
+	<view style="margin:30rpx 20rpx;">
+		<text>时间限制（秒）</text>
+		<slider id="1" bindchange="sliderChange" style="margin-top: 40rpx;" max="600" show-value value="{{configs[1].time}}"></slider>
+	</view>
+	<view style="margin:60rpx 20rpx 30rpx 20rpx;">
+		<text>声音提醒</text>
+		<radio-group id="1" bindchange="radioChange" class="radio_group">
+			<label><radio value="15" checked></radio>提前15秒</label>
+			<label><radio value="10"></radio>提前10秒</label>
+			<label><radio value="5"></radio>提前5秒</label>
+		</radio-group>
+	</view>
+</view>
+<view>
+	<view class="title_box">
+		<view>质辩阶段</view>
+		<switch id="2" bindchange="switchChange" checked="{{configs[2].state}}"></switch>
+	</view>
+	<view style="margin:30rpx 20rpx;">
+		<text>时间限制（秒）</text>
+		<slider id="2" bindchange="sliderChange" style="margin-top: 40rpx;" max="600" show-value value="{{configs[2].time}}"></slider>
+	</view>
+	<view style="margin:60rpx 20rpx 30rpx 20rpx;">
+		<text>声音提醒</text>
+		<radio-group id="2" bindchange="radioChange" class="radio_group">
+			<label><radio value="15" checked></radio>提前15秒</label>
+			<label><radio value="10"></radio>提前10秒</label>
+			<label><radio value="5"></radio>提前5秒</label>
+		</radio-group>
+	</view>
+</view>
+<view>
+	<view class="title_box">
+		<view>自由辩阶段</view>
+		<switch id="3" bindchange="switchChange"  checked="{{configs[3].state}}"></switch>
+	</view>
+	<view style="margin:30rpx 20rpx;">
+		<text>时间限制（秒）</text>
+		<slider id="3" bindchange="sliderChange" style="margin-top: 40rpx;" max="600" step="1" show-value value="{{configs[3].time}}"></slider>
+	</view>
+	<view style="margin:60rpx 20rpx 30rpx 20rpx;">
+		<text>声音提醒</text>
+		<radio-group id="3" bindchange="radioChange" class="radio_group">
+			<label><radio value="15" checked></radio>提前15秒</label>
+			<label><radio value="10"></radio>提前10秒</label>
+			<label><radio value="5"></radio>提前5秒</label>
+		</radio-group>
+	</view>
+</view>
+<view style="padding-bottom: 30rpx;">
+	<view class="title_box">
+		<view>总结陈词阶段</view>
+		<switch id="4" bindchange="switchChange" checked="{{configs[4].state}}"></switch>
+	</view>
+	<view style="margin:30rpx 20rpx;">
+		<text>时间限制（秒）</text>
+		<slider id="4" bindchange="sliderChange" style="margin-top: 40rpx;" max="600" show-value value="{{configs[4].time}}"></slider>
+	</view>
+	<view style="margin:60rpx 20rpx 30rpx 20rpx;">
+		<text>声音提醒</text>
+		<radio-group id="4" bindchange="radioChange" class="radio_group">
+			<label><radio value="15" checked></radio>提前15秒</label>
+			<label><radio value="10"></radio>提前10秒</label>
+			<label><radio value="5"></radio>提前5秒</label>
+		</radio-group>
+	</view>
+</view>
+<view style="background-color: #ff4444;color: #FFF;font-size: 48rpx;text-align: center;padding: 20rpx 0;" bindtap="recover" hidden="{{reState}}">恢复默认</view>
